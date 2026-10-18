@@ -1,0 +1,74 @@
+@use "../tools" as *;
+
+.cookie-banner {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: var(--color-white);
+	color: inherit;
+	z-index: 9999;
+	border-block: 1px solid var(--color-gray-3);
+	transition: all 0.3s;
+	color: var(--color-dark);
+
+	&.hide {
+		display: none;
+	}
+
+	&__container {
+		padding-block: 16px;
+		padding-inline: 16px;
+		display: flex;
+		gap: adapt(20, 16);
+		justify-content: space-between;
+		align-items: center;
+
+		@include media($tablet) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__content {
+		@include reset;
+		font-family: var(--font-family-title);
+		font-weight: 400;
+		font-size: 14px;
+		flex: 0 1 880px;
+
+		a {
+			color: var(--color-green);
+			transition: all 0.3s;
+			@include hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: adapt(20, 16);
+		flex: 0 1 260px;
+
+		@include media($mobile-sm) {
+			flex: 1 1 100%;
+			width: 100%;
+		}
+	}
+
+	&__btn.btn {
+		padding-inline: 24px;
+		@include media($mobile-sm) {
+			flex: 1;
+			max-width: 100%;
+			min-width: initial;
+		}
+	}
+	&__btn.btn--stroke {
+		color: var(--color-dark-2);
+		box-shadow: none;
+		@include hover {
+			color: var(--color-white);
+		}
+	}
+}

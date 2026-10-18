@@ -1,0 +1,90 @@
+@use "../tools" as *;
+
+.pick-color {
+	padding-block: var(--section-padding-05);
+
+	&__container {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__descr {
+		max-width: 740px;
+		margin: 0 auto;
+
+		&:not(:last-child) {
+			margin-bottom: adapt(44, 24);
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		gap: 24px;
+
+		@include media($mobile) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__list {
+		@include reset;
+		list-style-type: none;
+		flex: 0 1 468px;
+		display: flex;
+		flex-direction: column;
+		gap: adapt(32, 20);
+		@include counter(false, ".pick-color-step");
+		@include media($mobile) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__item {
+	}
+
+	&__form {
+		flex: 0 1 486px;
+		background: var(--color-white);
+		padding: adapt(24, 12);
+		border-radius: 10px;
+		box-shadow: 0 1px 4px 0 rgba(107, 83, 57, 0.15);
+		@include media($mobile) {
+			flex: 1 1 100%;
+		}
+	}
+}
+
+.pick-color-step {
+	display: flex;
+	gap: adapt(20, 10);
+
+	&::before {
+		content: "";
+		@include square(46px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: var(--color-green);
+		border-radius: 50%;
+		font-size: rem(18);
+		color: var(--color-white);
+		font-weight: 600;
+		flex-shrink: 0;
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__title {
+	}
+
+	&__descr {
+	}
+}

@@ -1,0 +1,54 @@
+@use "../tools" as *;
+
+.page-404 {
+	padding-block: adapt(76, 44) adapt(112, 56);
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: adapt(130, 24, $mobile);
+
+		@include media($mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: adapt(24, 20);
+	}
+
+	&__404 {
+		font-weight: 600;
+		font-size: adapt(280, 180);
+		line-height: 0.7;
+		color: var(--color-green);
+	}
+
+	&__title {
+	}
+
+	&__descr {
+	}
+
+	&__btn {
+		max-width: 216px;
+		width: 100%;
+		@include media($mobile-sm) {
+			max-width: 100%;
+		}
+	}
+
+	&__image {
+		padding-bottom: 73%;
+		border-radius: adapt(24, 12);
+		overflow: hidden;
+		box-shadow: 0 1px 4px 0 rgba(107, 83, 57, 0.15);
+
+		@include media($mobile) {
+			display: none;
+		}
+	}
+}

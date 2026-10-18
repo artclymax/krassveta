@@ -1,0 +1,59 @@
+@use "tools/constants" as *;
+@use "tools/functions" as *;
+@use "tools/mixins" as *;
+
+// LIBS
+@use "base/normalize";
+////@use "../../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css";
+////@use "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css";
+
+// BASE
+////@use "base/fonts";
+@use "base/vars";
+@use "base/resets";
+@use "base/global";
+@use "base/utils";
+////@use "base/_components.scss";
+
+// COMPONENTS
+@use "components/_logo.scss";
+@use "components/_btn.scss";
+@use "components/_icon.scss";
+@use "components/_typography.scss";
+@use "components/_grid.scss";
+@use "components/_header-menu.scss";
+@use "components/_swiper.scss";
+@use "components/_form.scss";
+//@use "components/_cf-select.scss";
+//@use "components/_running-line.scss";
+@use "components/_scroll-to-top.scss";
+@use "components/_modal.scss";
+@use "components/_cookie-banner.scss";
+//@use "components/_cookie-banner-2.scss";
+@use "components/_navxt_breadcrumbs.scss";
+//@use "components/_wp-block.scss";
+//@use "components/_pagination.scss";
+//@use "components/_hero-404.scss";
+//@use "components/_table.scss";
+//@use "components/_footer-menu.scss";
+//@use "components/_form-input.scss";
+//@use "components/_phone-box.scss";
+//@use "components/_swiper-components.scss";
+
+// SECTIONS
+@use "sections/_header.scss";
+@use "sections/_hero.scss";
+@use "sections/_about.scss";
+@use "sections/_benefits.scss";
+@use "sections/_products.scss";
+@use "sections/_pick-color.scss";
+@use "sections/_gallery.scss";
+@use "sections/_review.scss";
+@use "sections/_contacts.scss";
+@use "sections/_footer.scss";
+@use "sections/_hero-page.scss";
+@use "sections/_hero-404.scss";
+
+#wpadminbar {
+	position: fixed;
+}

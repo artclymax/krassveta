@@ -1,0 +1,188 @@
+@use "../tools" as *;
+
+.footer {
+	padding-block: adapt(64, 56) 70px;
+	background-color: var(--color-white);
+	font-size: rem(14);
+
+	&__container {
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		gap: 24px;
+
+		&:not(:last-child) {
+			padding-bottom: 24px;
+			border-bottom: 1px solid var(--color-gray-3);
+			margin-bottom: adapt(32, 24);
+		}
+
+		@include media($mobile) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__info {
+		flex: 0 1 320px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__logo {
+		width: 132px;
+	}
+
+	&__descr {
+		font-size: 1rem;
+		font-weight: 500;
+	}
+
+	&__menu {
+		flex: 0 1 320px;
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__contacts {
+		flex: 0 1 320px;
+	}
+
+	&__contacts-list {
+		@include reset;
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 24px;
+
+		@include media($mobile) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__col {
+		font-weight: 500;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		font-size: rem(14);
+	}
+
+	&__unp {
+		@include reset;
+	}
+
+	&__copy {
+		@include reset;
+		display: block;
+		font-size: inherit;
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: right;
+		gap: 10px;
+		@include media($mobile) {
+			flex: 1 1 100%;
+			text-align: left;
+			align-items: flex-start;
+		}
+	}
+
+	&__link {
+		color: inherit;
+		transition: all 0.3s;
+
+		@include hover {
+			color: var(--color-accent);
+		}
+	}
+}
+
+.footer-menu {
+	&__list {
+		@include reset;
+		list-style-type: none;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 12px;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			display: inline-flex;
+			transition: all 0.3s;
+
+			@include hoverLine(slide, var(--color-accent), 2px);
+			@include hover {
+				//color: var(--color-accent-dark);
+			}
+
+			@include media($tablet) {
+				&::after {
+					display: none;
+				}
+			}
+
+			&[aria-current],
+			.current-section {
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.contacts-footer {
+	&__item {
+		gap: 10px;
+	}
+
+	&__list {
+		@include reset;
+		list-style-type: none;
+	}
+}
+
+.contacts-footer-item {
+	--width: 22px;
+
+	.phone-box__phone {
+		font-weight: 500;
+	}
+	&__wrapper {
+	}
+
+	&__link {
+	}
+
+	&__address {
+		font-style: normal;
+	}
+
+	.social-list__link {
+		gap: 10px;
+		font-weight: 400;
+		font-size: rem(14);
+		&::before {
+			--width: 22px;
+			--height: 22px;
+		}
+	}
+}

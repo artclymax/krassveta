@@ -1,0 +1,69 @@
+@use "../tools" as *;
+
+.reviews {
+	padding-block: var(--section-padding-05);
+	&__container {
+	}
+
+	&__body {
+		border-radius: adapt(24, 12);
+		padding: adapt(44, 24) adapt(44, 12);
+		background: var(--color-white);
+		box-shadow: 0 1px 4px 0 rgba(107, 83, 57, 0.15);
+		display: grid;
+		grid-template-columns: 0.55fr 1fr;
+		justify-content: space-between;
+		gap: adapt(100, 44);
+
+		@include media($mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__col {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__descr {
+	}
+
+	&__list {
+		--min: 250px;
+		--gap: #{adapt(68, 24)};
+		--col: auto-fill;
+		@include reset;
+		list-style-type: none;
+		display: grid;
+		grid-template-columns: repeat(var(--col), minmax(var(--min), 1fr));
+		gap: var(--gap);
+	}
+
+	&__item {
+	}
+}
+
+.reviews-item {
+	&__logo {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__text {
+		@include reset;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__btn {
+	}
+}

@@ -1,0 +1,74 @@
+@use "../tools" as *;
+
+.products {
+	background: var(--color-white);
+
+	&__container {
+		display: grid;
+		justify-items: center;
+		gap: adapt(44, 24);
+	}
+
+	&__title {
+	}
+
+	&__list {
+		--min: 400px;
+		width: 100%;
+		gap: adapt(24, 20);
+		@include media($tablet) {
+			--min: 350px;
+		}
+	}
+
+	&__item {
+	}
+
+	&__btn {
+	}
+}
+
+.products-item {
+	display: flex;
+	align-items: center;
+	border-radius: adapt(24, 12);
+	border: 1px solid var(--color-gray-4);
+	gap: adapt(20, 10);
+	transition: all 0.3s;
+
+	@include hover {
+		box-shadow: 0 2px 16px 0 rgba(20, 28, 52, 0.2);
+	}
+	
+	&__image {
+		min-height: adapt(180, 100);
+		flex: 0 0 adapt(180, 100);
+		border-radius: adapt(24, 12);
+		overflow: hidden;
+	}
+
+	&__content {
+		padding: adapt(24, 12);
+		padding-left: 0;
+		display: flex;
+		flex-direction: column;
+		gap: adapt(12, 10);
+	}
+
+	&__label {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 5px;
+		max-width: 100px;
+		width: 100%;
+		font-size: rem(10);
+		border-radius: 30px;
+	}
+
+	&__title {
+	}
+
+	&__descr {
+	}
+}

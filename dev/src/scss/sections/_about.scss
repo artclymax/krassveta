@@ -1,0 +1,44 @@
+@use "../tools" as *;
+
+.about {
+	background: var(--color-white);
+
+	&__container {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+
+		& > * {
+			flex: 1;
+		}
+
+		@include media($mobile) {
+			flex-wrap: wrap;
+
+			& > * {
+				flex: 1 1 100%;
+			}
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: adapt(500, 290);
+		border-radius: 24px;
+		overflow: hidden;
+		box-shadow: 0 1px 4px 0 rgba(107, 83, 57, 0.15);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: adapt(20, 12);
+	}
+
+	&__title {
+
+	}
+
+	&__descr {
+	}
+}

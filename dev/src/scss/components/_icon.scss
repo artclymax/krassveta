@@ -1,0 +1,57 @@
+@use "../tools" as *;
+
+.icon {
+	--width: 20px;
+	--height: var(--width);
+	--bg-size: contain;
+
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+
+	&::before {
+		content: "";
+		flex-shrink: 0;
+		//margin-top: 6px;
+		width: var(--width);
+		height: var(--height);
+		background-position: center;
+		background-size: var(--bg-size);
+		background-repeat: no-repeat;
+		background-image: var(--icon-bg);
+	}
+
+	&--after {
+		&::before {
+			display: none;
+		}
+		&::after {
+			content: "";
+			flex-shrink: 0;
+			width: var(--width);
+			height: var(--height);
+			background-position: center;
+			background-size: var(--bg-size);
+			background-repeat: no-repeat;
+			background-image: var(--icon-bg);
+		}
+	}
+
+	&--phone {
+		--icon-bg: url("../../../public/images/icons/phone.svg");
+	}
+
+	&--email {
+		--icon-bg: url("../../../public/images/icons/email.svg");
+	}
+
+	&--address {
+		--icon-bg: url("../../../public/images/icons/address.svg");
+	}
+
+	&--label-check {
+		--icon-bg: url("../../../public/images/icons/label-check.svg");
+	}
+
+	
+}

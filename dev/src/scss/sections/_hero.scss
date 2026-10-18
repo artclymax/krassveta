@@ -1,0 +1,180 @@
+@use "../tools" as *;
+
+.hero {
+	padding-block: adapt(76, 24) 58px;
+
+	@include media($tablet) {
+		padding-top: 44px;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+
+		& > * {
+			flex: 1;
+		}
+
+		@include media($mobile) {
+			flex-wrap: wrap;
+			gap: 40px;
+			& > * {
+				flex: 1 1 100%;
+			}
+		}
+	}
+
+	&__content {
+	}
+
+	&__title {
+		max-width: 560px;
+		text-wrap: balance;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__descr {
+		max-width: 560px;
+		text-wrap: balance;
+		&:not(:last-child) {
+			margin-bottom: adapt(32, 24);
+		}
+	}
+
+	&__benefits {
+		&:not(:last-child) {
+			margin-bottom: adapt(32, 24);
+		}
+	}
+
+	&__btn {
+		&:not(:last-child) {
+			margin-bottom: adapt(32, 24);
+		}
+	}
+
+	&__note {
+		@include reset;
+		display: block;
+		font-weight: 500;
+		font-size: rem(14);
+	}
+
+	&__media {
+	}
+}
+
+.benefits-hero {
+	@include reset;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: adapt(12, 8);
+
+	&__item {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 14px adapt(18, 14);
+		border-radius: 30px;
+		background: var(--color-white);
+		overflow: hidden;
+		box-shadow: 0 1px 4px 0 rgba(107, 83, 57, 0.15);
+	}
+
+	&__icon {
+		@include square(20px);
+	}
+
+	&__text {
+		@include reset;
+		font-size: rem(14);
+		font-weight: 600;
+	}
+}
+
+.hero-media {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: adapt(24, 8);
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+		//align-items: center;
+		justify-content: center;
+		gap: adapt(24, 8);
+	}
+
+	&__image {
+		height: adapt(239, 142);
+		width: 100%;
+		border-radius: 34px;
+		overflow: hidden;
+		box-shadow: 0 1px 4px 0 rgba(107, 83, 57, 0.15);
+		@include media($mobile) {
+			border-radius: 12px;
+		}
+	}
+
+	&__label {
+		align-self: flex-end;
+		display: inline-flex;
+		padding: adapt(16, 14) adapt(18, 14);
+		background: var(--color-green);
+		border-radius: 30px;
+		color: var(--color-white);
+		font-size: adapt(14, 12);
+		font-weight: 600;
+		position: relative;
+		z-index: 2;
+		transform: rotate(15deg);
+		margin-bottom: -20px;
+		margin-right: -6px;
+		--width: 14px;
+		margin-top: -25%;
+
+		@include media($mobile) {
+			margin-bottom: -6px;
+			margin-top: -5%;
+		}
+	}
+
+	&__color-box {
+		padding: adapt(24, 12) adapt(24, 12);
+		border-radius: 34px;
+		background: var(--color-white);
+		overflow: hidden;
+		box-shadow: 0 1px 4px 0 rgba(107, 83, 57, 0.15);
+		@include media($mobile) {
+			border-radius: 12px;
+		}
+	}
+
+	&__color-list {
+		@include reset;
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		gap: adapt(10, 4);
+		&:not(:last-child) {
+			margin-bottom: adapt(16, 8);
+		}
+	}
+
+	&__color-item {
+		@include square(adapt(32, 18));
+		border-radius: 50%;
+	}
+
+	&__color-text {
+		@include reset;
+		font-weight: 500;
+		font-size: adapt(14, 12);
+	}
+}

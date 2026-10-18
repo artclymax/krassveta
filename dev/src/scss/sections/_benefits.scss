@@ -1,0 +1,57 @@
+@use "../tools" as *;
+
+.benefits {
+	background: var(--color-light-2);
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: adapt(44, 24);
+	}
+
+	&__title {
+	}
+
+	&__list {
+		gap: adapt(24, 20);
+	}
+
+	&__item {
+	}
+}
+
+.benefits-item {
+	box-shadow: 0 1px 4px 0 rgba(107, 83, 57, 0.15);
+	background: var(--color-white);
+	padding: adapt(30, 12) adapt(24, 12);
+	border-radius: adapt(24, 12);
+	transition: all 0.3s;
+
+	@include hover {
+		box-shadow: 0 2px 16px 0 rgba(20, 28, 52, 0.2);
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		gap: adapt(20, 10);
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__image {
+		flex-shrink: 0;
+		@include square(46px);
+		background: var(--color-accent);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 6px;
+	}
+
+	&__title {
+	}
+
+	&__descr {
+	}
+}

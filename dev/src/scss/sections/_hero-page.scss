@@ -1,0 +1,19 @@
+@use "../tools" as *;
+
+.hero-page {
+	padding-top: 24px;
+	padding-bottom: 44px;
+
+	&__container {
+	}
+
+	&__breadcrumbs {
+		&:not(:last-child) {
+			margin-bottom: adapt(44, 24);
+		}
+	}
+
+	&__title {
+		text-align: center;
+	}
+}

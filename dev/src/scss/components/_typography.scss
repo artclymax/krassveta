@@ -1,0 +1,65 @@
+@use "../tools" as *;
+// Typography
+.title,
+.title-1,
+.title-2,
+.title-3,
+.title-4 {
+	@include reset;
+
+	font-weight: 600;
+	line-height: 130%;
+	color: var(--color-dark);
+}
+
+.title-1 {
+	font-size: adapt(54, 34);
+	line-height: 1;
+}
+
+.title-2 {
+	font-size: adapt(36, 28);
+}
+
+.title-3 {
+	font-size: rem(18);
+}
+
+.title-4 {
+	@include reset;
+	font-weight: 400;
+	font-size: adapt(20, 16);
+}
+
+.title-accent {
+	padding-bottom: 16px;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 56px;
+		height: 3px;
+		background: var(--color-accent);
+	}
+}
+.text-small {
+	font-size: adapt(14, 12);
+}
+.upcase {
+	text-transform: uppercase;
+}
+.hint {
+	color: var(--color-gray);
+}
+.t-center {
+	text-align: center;
+}
+.text-gradient {
+	background: linear-gradient(180deg, #ff7a1a 0%, #ffc94a 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

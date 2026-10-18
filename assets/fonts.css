@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'RobotoFlex-VF';
+	src:
+		url('./fonts/RobotoFlex-VariableFont.woff2') format('woff2-variations'),
+		url('./fonts/RobotoFlex-VariableFont.woff') format('woff');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
